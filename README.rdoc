@@ -1,0 +1,38 @@
+Rails application Templates
+===================
+In this repository, you will find severals templates in order to generate Rails applications.
+Checkout the official documentation:
+http://guides.rubyonrails.org/rails_application_templates.html
+
+----------
+
+Run in your favorite terminal: rails new "*awesome_app_name*" -m "*path_template_name*" to generate a customized application.
+
+----------
+rspec_turnip_templates
+-------------
+
+ 1. GEMS
+The template is based on the following gems:
+
+ - [Puma](https://github.com/puma/puma) *production server*
+ - [RSpec](https://github.com/rspec/rspec-rails) *testing framework*
+ - [Turnip](https://github.com/jnicklas/turnip) *Gherkin extension for RSpec*
+ - PostgreSQL
+
+
+ 2. TOOLS
+Two monitoring tools are loaded in production:
+
+ - [rollbar](https://rollbar.com/)
+ - [newrelic](http://newrelic.com/)
+
+
+ 3. Monitoring Scope
+ 
+Routes : 
+
+    get 'version' => 'monitoring#version'
+    get 'ping'    => 'monitoring#ping'
+
+Get *version* prints the current application version. You can set the version in: *config/initializers/version.rb*
